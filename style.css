@@ -1,7 +1,228 @@
-#timer{
+@charset "UTF-8";
 
-	font-size:60px;
-	font-family: sans-serif;
-	color:red;
-	font-weight:bold;
+@font-face {
+    font-family: 'Gayathri';
+    src: url('res/fonts/Gayathri-Thin.otf');
 }
+
+::placeholder {
+	color: #808080;
+	font-size: 17px;
+  }
+
+head {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+body {
+	margin:0px;
+ 	padding:0px;
+ 	color:#333333;
+}
+
+header{
+	background-color: #333333;
+	padding: 10px 30px 10px 10px;
+	position: relative;
+	display: flex;
+    justify-content: space-between;
+    place-items: center;
+
+}
+
+#presentation{
+	display: flex;
+    justify-content: space-between;
+    padding-right: 30px; 
+    place-items: center;
+}
+
+#main{
+    display: flex;  
+}
+
+#identifiants{
+	place-items: center;
+	overflow:auto;
+	display:flex;
+	flex-direction: column;
+	width:50%;
+	padding : 10px 0px 0px 0px;
+    margin : 10px 20px 0px 20px;
+    background-color: white;
+	margin-top: 10%;
+}
+
+footer{
+	background-color: #333333;
+	place-items: center;
+	position: relative;
+	bottom:0;
+	width: 100%;
+	margin:0; 
+	display: flex;
+    justify-content:space-between;
+	padding: 10px 0px 10px 0px;
+}
+
+/* typography*/
+
+#slogan{
+	font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;;
+	color: #ffffff;
+	padding-left: 40px;
+	font-size:25px;
+}
+
+input{
+	margin : 10px 20px 10px 0px;
+	color: black;
+	font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+	border-color:black;
+	border-width: 1.5px;
+	height:3.5%;
+	border-radius: 5px;
+	font-size:16px;
+	width: 55%;
+	vertical-align:middle;
+}
+
+h1{
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    margin-bottom:8%;
+}
+
+#cr{
+	font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+	color: #ffffff;
+	padding-right: 40px;
+	font-size:13px;		
+}
+
+/* images */
+
+#Logo{
+	width: 100px;
+	height: 100px;
+}
+
+#canvas{
+	width:50%;
+	height:70%;
+	display:flex;
+	padding : 0px 0px 0px 0px;
+}
+
+#erreur{
+	color:red;
+}
+
+#photo{
+	width:1940px;
+	height:1300px;
+	position:absolute;
+	overflow:hidden;
+}
+
+#Facebook{
+	width: 50px;
+	height: 50px;
+	padding-right:20px; 
+	padding-left:20px;
+}
+
+#Twitter{
+	width: 50px;
+	height: 50px;
+}
+
+#image{
+	width:50%;
+	height:70%;
+	display:flex;
+	padding : 0px 0px 0px 0px;
+}
+
+/* button */
+
+#connection{
+	background-color:white;
+	margin:15px 15px;
+    color:black;
+    font-weight: bold;
+    font-size:20px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;;
+    border:none; 
+    text-decoration: none;  
+}
+
+#inscription{
+	background-color: #2582ea;
+    color:white;
+    margin:15px 15px;
+    font-weight: bold;
+    font-size:20px;
+    padding: 10px 40px;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;;
+    border-radius: 10px;
+    cursor: pointer;
+    border:none; 
+    text-decoration: none;  
+}
+
+#connecter{
+	background-color: #e83b3b;
+    color:white;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size:17px;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    cursor: pointer;
+    border:none; 
+ 	margin:10px 0px 10px 0px;
+ 	text-decoration: none; 
+    place-items: center; 
+    width:20%;
+	min-width: 150px;
+	height: 28px; 
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, the picture is hidden */
+@media only screen and (max-width: 1150px) {
+	
+	#identifiants {   
+      width: 100%;
+     
+    }
+    
+    #image{
+	width:0%;
+	}
+	
+	#main{
+		margin: 0 0 2% 0;
+	
+	}
+    
+}
+
+
+@media (max-aspect-ratio: 16/9) and (min-width: 1150px){
+	
+	footer{
+	position:absolute;
+	margin-top:20px;
+	}
+	
+	
+}
+
+
+
+
