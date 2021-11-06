@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
+        <meta name= "viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+        <title>Deezify - Connection</title>
+        <link rel="stylesheet" type="text/css" href="./CSS/connection.css">
+        <link rel="icon" type="image/png" href="./res/img/deezify.png" />
+        <script type="text/javascript" src="JS/connection.js"></script>
+      </head>
 
-    <title>Accueil</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-   
+    <body>
+        <header>
+            <div id= "presentation">
+                <a href='connection'><img id="Logo" src="res/img/deezify.png" alt="Logo Deezify"></a>
+    			<p id="slogan" >Because music gives rhythm to your life</p>
+            </div>
 
-  </head>
-  <body>
-    <p>Hello !</p>
-    <canvas id="canvas" width="600" height="600"> </canvas>
-    <script LANGUAGE="JavaScript" src = "script.js"></script>
-    
-  </body>
+            <div id="boutons">
+    			<button id="connection" name="Connection">Connexion</button>
+    			<a href="inscription"><button id="inscription" name="Inscription">Inscription</button></a>
+    		</div>
+        </header>
+
+        <div id="main">
+            <form action="" method="POST" id = "identifiants">
+                <h1>Retrouvez vos meilleures sensations !</h1>
+                <input type="text" id="mail" name="mail" placeholder="Adresse e-mail"  required>
+                <input type="text" id="mdp" name="mdp" placeholder="Mot de passe" onfocus="focusHint(this)" onblur="blurHint(this)" required>
+                <input type="submit" id="connecter" value="Se Connecter"/> 
+                <c:if test="${ !empty form }"><p id="erreur"> <c:out value="${ form }"></c:out></p></c:if>
+            </form>
+            
+            
+
+            <canvas id="image" width = "1500" height = "1295"></canvas>
+
+            <div style="display:none;">
+                <img id="photo" src="res/img/photo2.jpg" alt="" onload="image(this)"> 
+            </div>
+        </div>
+
+        <footer>
+            <div id = "fbtwi">
+                <img id="Facebook" src="res/img/fb.png" alt="Facebook Deezify">
+        		<img id="Twitter" src="res/img/twitter.png" alt="Twitter Deezify">
+            </div>
+            <div id = "cr">
+                <p>©Deezify</p>
+            </div>
+        </footer>
+    </body>
 </html>
-
